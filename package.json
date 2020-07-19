@@ -1,6 +1,6 @@
 {
   "name": "sprint-14",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Creating a REST API, exploring noSQL databases in MongoDB and Mongoose",
   "main": "app.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aa-chernov/sprint-12.git"
+    "url": "git+https://github.com/aa-chernov/sprint-14.git"
   },
   "keywords": [],
   "author": "Alex Chernov",
