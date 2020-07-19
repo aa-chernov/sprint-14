@@ -58,9 +58,17 @@ module.exports.createUser = (req, res) => {
         },
         message: `Создан пользователь: ${name}`,
       }))
-    .catch((err) => res
-      .status(500)
-      .send({ message: err.message }));
+    .catch((err) => {
+      if (err.name === 'ValidationError') {
+        res
+          .status(400)
+          .send({ message: err.message });
+      } else {
+        res
+          .status(500)
+          .send({ message: err.message });
+      }
+    });
 };
 
 module.exports.getUsers = (req, res) => {
