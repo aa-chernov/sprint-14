@@ -1,7 +1,7 @@
 {
   "name": "sprint-14",
   "version": "0.0.2",
-  "description": "Creating a REST API, exploring noSQL databases in MongoDB and Mongoose",
+  "description": "Реализуем аутентификацию и авторизацию. Повышаем безопасность веб-приложения",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
