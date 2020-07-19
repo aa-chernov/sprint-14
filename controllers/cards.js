@@ -27,6 +27,8 @@ module.exports.deleteCard = async (req, res) => {
     const card = await Card.findByIdAndRemove(req.params._id);
     if (card === null) {
       res.status(404).send({ message: 'Нет такой карточки' });
+    } else if (card.owner._id !== req.user._id) {
+      res.status(403).send({ message: 'Вы не можете удалить эту карточку' });
     } else {
       res.send({ message: `Удалена карточка ${card.name} с id ${card._id}`, card });
     }
